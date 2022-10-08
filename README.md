@@ -1,2 +1,2 @@
 # Diplomado_Machine_Learning_Aplicado
-Este repositorio es para trabajar los proyectos del diplomado
+Objetivo: guardar todo el material del diplomado mientras aprendo git
