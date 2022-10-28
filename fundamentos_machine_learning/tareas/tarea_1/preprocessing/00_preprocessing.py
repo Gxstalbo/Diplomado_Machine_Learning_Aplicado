@@ -8,4 +8,15 @@ os.chdir(file)
 #Carga datasets
 df_sentences= pd.read_csv(r"output\total_sentences.csv", sep=",")
 
-#
+df_positive = df_sentences.query("CLASS==1")
+del(df_positive['CLASS'])
+
+df_negative= df_sentences.query("CLASS==0")
+del(df_negative['CLASS'])
+
+#Sentencia completa
+vectores_positive= lista_a_matriz([normalizar_vector((vectorizar_frase(frase))) for frase in df_positive['SENTENCE'].tolist()])
+
+#for frase in df_positive['SENTENCE'].tolist():
+#    frase.split()
+    

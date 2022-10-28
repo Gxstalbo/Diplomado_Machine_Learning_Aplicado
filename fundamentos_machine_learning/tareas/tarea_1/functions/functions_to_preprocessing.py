@@ -8,11 +8,22 @@ def vectorizar_palabra(strng, alphabet=string.ascii_lowercase):
   return vector
 
 def normalizar_vector(vector):
-  v = vector / np.sum(vector)
-  return v
+  list_v=[]
+  for vect in vector:
+    for vect2 in vect:
+      v = vect2 / np.sum(vect2)
+      list_v.append(v)
+  return list_v
 
 def lista_a_matriz(lista, vert = True):
   if vert:
     return np.vstack(lista)
   else:
     return np.hstack(lista)
+
+def vectorizar_frase(string):
+  sentence= string.split()
+  list_palabra=[]
+  for palabra in sentence:
+    list_palabra.append(vectorizar_palabra(palabra.lower()))
+  return list_palabra
