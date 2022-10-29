@@ -45,3 +45,9 @@ def estandarizar_largo(vector, largo_maximo):
       return vector
   except:
     return
+
+def lista_a_matriz_original(lista, vert = True):
+  if vert:
+    return np.vstack(lista)
+  else:
+    return np.hstack(lista)
